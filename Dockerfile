@@ -3,9 +3,9 @@ FROM node:20-alpine as builder
 
 WORKDIR /app
 
-COPY package.json .
+COPY package*.json ./
 
-RUN npm install -g npm@latest
+RUN npm install
 
 COPY . .
 
